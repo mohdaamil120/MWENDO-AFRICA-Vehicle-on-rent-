@@ -5,8 +5,261 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #nav{
+            display: flex;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+        #nav img{
+            width: 18%;
+            height: 70px;
+            /* border: 1px solid black; */
+            margin-right: 15px;
+        }
+        #nav div:nth-child(1){
+            display: flex;
+            width: 50%;
+            /* border: 1px solid red; */
+            align-items:center ;
+            
+        }
+        #nav > div:nth-child(1) > h2{
+            color: #f68520
+        }
+        #nav div:nth-child(2){
+            width: 50%;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items:center ;
+            justify-content: space-evenly;
+        
+        }
+        #nav div:nth-child(2):hover{
+            cursor:pointer;
+        }
+        #select {
+            border: none;
+            font-size: 15px;
+            font-weight: bold;
+            
+        }
+        #login{
+            border: 0.5px solid #000000;
+            border-radius: 50px;
+            background-color: white;
+            color: blue;
+            /* outline: none; */
+            padding: 15px;
+            font-size: 18px;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        #get-started{
+            border: 0.5px solid black;
+            border-radius: 50px;
+            background-color: blue;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        #login:hover{
+            cursor: pointer;
+        }
+        #get-started:hover{
+            cursor: pointer;
+        }
+
+        select:hover{
+            cursor: pointer;
+        }
+        span{
+            color: rgb(30,27,120)
+        }
+        .top-div{
+            border-radius: 20px;
+            margin-top: 30%;
+            border: 1px solid blue;
+            width: 90%;
+            height: 700px;
+            margin: auto;
+            background-image: url('https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTk4MjJ8MHwxfHNlYXJjaHwxODY0fHxzY2llbmNlfGVufDB8MHx8fDE2NjU5OTYwNTc&ixlib=rb-1.2.1&q=80&w=1080&auto=format&auto=enhance');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 50px;
+        }
+
+        .top-div{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #mid >h1{
+            font-size: 50px;
+            text-align: center;
+        }
+        #mid >p{
+            text-align: center;
+            font-size: 15px;
+        }
+        #mid{
+            /* border: 1px solid white; */
+            width: 45%;
+
+        }
+        #mid > div{
+            display: flex;
+            justify-content: center;
+        }
+        .a{
+            background-color: blue;
+            padding: 15px;
+            font-size: 18px;
+            padding-right: 30px;
+            padding-left: 30px;
+            border: 0.5px solid black;
+            border-radius: 50px;
+            color: white;
+            margin-right: 20px
+        }
+        .b{
+            background-image: url("https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTk4MjJ8MHwxfHNlYXJjaHwxODY0fHxzY2llbmNlfGVufDB8MHx8fDE2NjU5OTYwNTc&ixlib=rb-1.2.1&q=80&w=1080&auto=format&auto=enhance");
+            padding: 15px;
+            font-size: 18px;
+            padding-right: 30px;
+            padding-left: 30px;
+            border: 0.5px solid white;
+            border-radius: 50px;
+            color: white;
+        }
+        .low-top{
+            /* border: 1px solid blue; */
+            width: 90%;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, ;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+            border-radius: 10px;
+        }
+        .low-top > div{
+            width: 46%;
+            height: 600px;
+            border-radius: 10px;
+            /* border: 1px solid red; */
+        }
+        .low-top > div > img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .head > h1{
+            font-size: 46px;
+            color: blue;
+            margin-top: -10px;
+        }
+        .head >p{
+            font-size: 19px;
+        }
+        #img{
+            width: 10%;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .img-div{
+            display: flex;
+            /* border: 1px solid red; */
+            /* justify-content: space-between; */
+            align-items: center;
+        }
+        .img-div> div >h3{
+            margin-bottom: -15px;
+            /* background-color: blue; */
+            font-size: 25px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Day-2 branch</h1>
+    <div id="nav">
+        <div>
+             <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/99/62/cc/caption.jpg?w=900&h=900&s=1" alt="">
+             <h2 id="firstWord"><span>MWENDO</span> AFRICA</h2>
+        </div>
+        <div>
+            <h3>Home</h3>
+            <h3>About</h3>
+            <select name="" id="select">
+                <option value="">Resources</option>
+                <option value="Bus">Bus</option>
+                <option value="Car">Car</option>
+                <option value="Caravan">Caravan</option>
+            </select>
+            <button id="login">Login</button>
+            <button id="get-started">Get started</button>
+        </div>
+    </div>
+    <div class="top-div">
+            <div id="mid">
+                <h1>A dedicated team to grow your company</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nemo in vero ea, aspernatur laboriosam sit deleniti.</p>
+                <div>
+                    <button class="a">Get started -></button>
+                    <button class="b">Talk to sales</button>
+                </div>
+            </div>
+    </div>
+
+    <div class="low-top">
+        <div>
+            <img src="https://thumb.tildacdn.com/tild3333-3930-4532-b036-316662373035/-/resize/780x/-/format/webp/car_rental.png" alt="">
+        </div>
+        <div class="head">
+            <h1>
+                Boost your productivity with Mwendo Africa
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos quia ratione amet veniam eius commodi nulla velit odio nobis porro.</p>
+            <div class="img-div">
+                <img id ="img" src="https://www.shutterstock.com/image-photo/driving-car-night-man-his-260nw-233041750.jpg" alt="">
+                <div>
+                <h3>Mission</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, natus gryer thak hulo.</p>
+                </div>
+            </div>
+            <div class="img-div">
+                <img id ="img" src="https://www.shutterstock.com/image-photo/driving-car-night-man-his-260nw-233041750.jpg" alt="">
+                <div>
+                <h3>Vision</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, natus gryer thak hulo.</p>
+                </div>
+            </div>
+            <div class="img-div">
+                <img id ="img" src="https://www.shutterstock.com/image-photo/driving-car-night-man-his-260nw-233041750.jpg" alt="">
+                <div>
+                <h3>Our Promise</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, natus gryer thak hulo.</p>
+                </div>
+            </div>
+            <div class="img-div">
+                <img id ="img" src="https://www.shutterstock.com/image-photo/driving-car-night-man-his-260nw-233041750.jpg" alt="">
+                <div>
+                <h3>Values</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, natus gryer thak hulo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
