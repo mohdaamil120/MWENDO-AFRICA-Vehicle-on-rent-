@@ -5,8 +5,738 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #nav{
+            display: flex;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+        #nav img{
+            width: 18%;
+            height: 70px;
+            /* border: 1px solid black; */
+            margin-right: 15px;
+        }
+        #nav div:nth-child(1){
+            display: flex;
+            width: 50%;
+            /* border: 1px solid red; */
+            align-items:center ;
+            
+        }
+        #nav > div:nth-child(1) > h2{
+            color: #f68520
+        }
+        #nav div:nth-child(2){
+            width: 50%;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items:center ;
+            justify-content: space-evenly;
+        
+        }
+        #nav div:nth-child(2):hover{
+            cursor:pointer;
+        }
+        #select {
+            border: none;
+            font-size: 15px;
+            font-weight: bold;
+            
+        }
+        #login{
+            border: 0.5px solid #000000;
+            border-radius: 50px;
+            background-color: white;
+            color: blue;
+            /* outline: none; */
+            padding: 15px;
+            font-size: 18px;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        #get-started{
+            border: 0.5px solid black;
+            border-radius: 50px;
+            background-color: blue;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        #login:hover{
+            cursor: pointer;
+        }
+        #get-started:hover{
+            cursor: pointer;
+        }
+
+        select:hover{
+            cursor: pointer;
+        }
+        span{
+            color: rgb(30,27,120)
+        }
+        .top-div{
+            border-radius: 20px;
+            margin-top: 30%;
+            border: 1px solid blue;
+            width: 90%;
+            height: 700px;
+            margin: auto;
+            background-image: url('https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTk4MjJ8MHwxfHNlYXJjaHwxODY0fHxzY2llbmNlfGVufDB8MHx8fDE2NjU5OTYwNTc&ixlib=rb-1.2.1&q=80&w=1080&auto=format&auto=enhance');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 50px;
+        }
+
+        .top-div{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #mid >h1{
+            font-size: 50px;
+            text-align: center;
+        }
+        #mid >p{
+            text-align: center;
+            font-size: 15px;
+        }
+        #mid{
+            /* border: 1px solid white; */
+            width: 45%;
+
+        }
+        #mid > div{
+            display: flex;
+            justify-content: center;
+        }
+        .a{
+            background-color: blue;
+            padding: 15px;
+            font-size: 18px;
+            padding-right: 30px;
+            padding-left: 30px;
+            border: 0.5px solid black;
+            border-radius: 50px;
+            color: white;
+            margin-right: 20px
+        }
+        .b{
+            background-image: url("https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTk4MjJ8MHwxfHNlYXJjaHwxODY0fHxzY2llbmNlfGVufDB8MHx8fDE2NjU5OTYwNTc&ixlib=rb-1.2.1&q=80&w=1080&auto=format&auto=enhance");
+            padding: 15px;
+            font-size: 18px;
+            padding-right: 30px;
+            padding-left: 30px;
+            border: 0.5px solid white;
+            border-radius: 50px;
+            color: white;
+        }
+        .low-top{
+            /* border: 1px solid blue; */
+            width: 90%;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, ;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+            border-radius: 10px;
+            margin-bottom: 20px
+        }
+        .low-top > div{
+            width: 46%;
+            height: 600px;
+            border-radius: 10px;
+            /* border: 1px solid red; */
+        }
+        .low-top > div > img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .head > h1{
+            font-size: 46px;
+            color: blue;
+            margin-top: -10px;
+        }
+        .head >p{
+            font-size: 19px;
+        }
+        #img{
+            width: 8%;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .img-div{
+            display: flex;
+            /* border: 1px solid red; */
+            /* justify-content: space-between; */
+            align-items: center;
+        }
+        .img-div> div >h3{
+            margin-bottom: -15px;
+            /* background-color: blue; */
+            font-size: 25px;
+        }
+        #second-low-div{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            /* border: 1px solid black; */
+            margin-bottom: 20px;
+            text-align: center;
+            
+        }
+        #second-low-div > h1{
+            color: blue;
+            font-size: 45px;
+        }
+        #second-low-div>p{
+            font-size: 20px;
+        }
+        .booking{
+            display: flex;
+            width: 90%;
+            margin: auto;
+            /* border: 1px solid black; */
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .booking >div{
+            /* border: 1px solid rebeccapurple; */
+            border-radius: 15px;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        .booking> div >img{
+            width: 100%;
+            border-radius: 15px;
+        }
+        .booking >div >div{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+        }
+        .booking >div >div>button:nth-child(5){
+            width: 130%;
+        }
+        .booking >div >div>button{
+            height: 34px;
+            border: none;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .booking >div >button{
+            border: none;
+            border-radius: 15px;
+            justify-content: center;
+            margin-top: 15px;
+            height: 34px;
+            background-color: rgb(65,105,225);
+            color: white;
+            padding-bottom: 25px;
+            padding-top: 12px;
+        }
+        .booking>div>h1{
+            color: blue;
+        }
+        #forSlide{
+            /* border:1px solid red; */
+            text-align: right;
+            width: 90%;
+            margin: auto;
+        }
+        #forSlide>img{
+            width: 5%;
+        }
+        #first{
+            height: 365px;
+        }
+        .second{
+            height: 439px;
+        }
+        #third{
+            /* margin-top: -30px; */
+            height: 439px;
+        }
+        .heart{
+            display: flex;
+            /* border: 1px solid blue; */
+            /* justify-content: space-around; */
+            /* align-content: space-between; */
+        }
+        .heart>img{
+            width:50%;
+            /* border: 1px solid black; */
+            margin-left: 150%;
+            margin-top: 10px;
+        }
+        .booking > div{
+            box-shadow: 2px 2px 5px 2px gray;
+        }
+        .heart > h1{
+            /* font-size: 30px; */
+            /* border: 1px solid green; */
+            color: blue;
+            width: 200%;
+        }
+        .dollor{
+            display: flex;
+            /* margin-left: 150%; */
+        }
+        .dollor > h3{
+            margin-left: 140%;
+            width: 50%;
+           color: blue;
+            /* border: 1px solid black; */
+        }
+        .dollor>p{
+            color: blue;
+        }
+        .range{
+            width: 90%;
+            margin: auto;
+        }
+        .he{
+            text-align: center;
+            width: 40%;
+            margin: auto;
+            /* border: 1px solid red; */
+        }
+        .he > h1{
+            color: blue;
+            font-size: 40px;
+        }
+        .cars{
+            /* border: 1px solid red; */
+            display: flex;
+            gap: 20px;
+        }
+        .cars>div>img{
+            width:100%;
+        }
+        .cars>div:nth-child(1){
+            width: 30%;
+            gap: 20px;
+        }
+        .cars>div:nth-child(3){
+            width: 30%;
+            gap: 20px;
+        }
+        .cars>div{
+            /* border: 1px solid green; */
+        }
+        .cars>div>img{
+            border-radius: 15px;
+        }
+        .cars>div>img:nth-child(2){
+            height: 250px;
+            
+        }
+        .cars>div:nth-child(1)>img{
+            height: 250px;
+            width: 90%;
+        }
+        .cars>div:nth-child(2)>img{
+            height: 500px;
+        }
+        .cars>div:nth-child(3)>img:nth-child(2){
+            height: 279px;
+        }
+        #see{
+            background-color: blue;
+            color: white;
+            margin-left: 550px;
+            margin-top: 30px;
+            padding: 30px;
+            padding-left: 60px;
+            padding-right: 60px;
+            border: none;
+            border-radius: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h1>head</h1>
+    <div id="nav">
+        <div>
+             <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/99/62/cc/caption.jpg?w=900&h=900&s=1" alt="">
+             <h2 id="firstWord"><span>MWENDO</span> AFRICA</h2>
+        </div>
+        <div>
+            <h3>Home</h3>
+            <h3>About</h3>
+            <select name="" id="select">
+                <option value="">Resources</option>
+                <option value="Bus">Bus</option>
+                <option value="Car">Car</option>
+                <option value="Caravan">Caravan</option>
+            </select>
+            <button id="login">Login</button>
+            <button id="get-started">Get started</button>
+        </div>
+    </div>
+    <div class="top-div">
+            <div id="mid">
+                <h1>A dedicated team to grow your company</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nemo in vero ea, aspernatur laboriosam sit deleniti.</p>
+                <div>
+                    <button class="a">Get started -></button>
+                    <button class="b">Talk to sales</button>
+                </div>
+            </div>
+    </div>
+
+    <div class="low-top">
+        <div>
+            <img src="https://thumb.tildacdn.com/tild3333-3930-4532-b036-316662373035/-/resize/780x/-/format/webp/car_rental.png" alt="">
+        </div>
+        <div class="head">
+            <h1>
+                Boost your productivity with Mwendo Africa
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos quia ratione amet veniam eius commodi nulla velit odio nobis porro.</p>
+            <div class="img-div">
+                <img id ="img" src="https://www.shutterstock.com/image-photo/driving-car-night-man-his-260nw-233041750.jpg" alt="">
+                <div>
+                <h3>Mission</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, natus gryer thak hulo.</p>
+                </div>
+            </div>
+            <div class="img-div">
+                <img id ="img" src="https://www.shutterstock.com/image-photo/driving-car-night-man-his-260nw-233041750.jpg" alt="">
+                <div>
+                <h3>Vision</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, natus gryer thak hulo.</p>
+                </div>
+            </div>
+            <div class="img-div">
+                <img id ="img" src="https://www.shutterstock.com/image-photo/driving-car-night-man-his-260nw-233041750.jpg" alt="">
+                <div>
+                <h3>Our Promise</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, natus gryer thak hulo.</p>
+                </div>
+            </div>
+            <div class="img-div">
+                <img id ="img" src="https://www.shutterstock.com/image-photo/driving-car-night-man-his-260nw-233041750.jpg" alt="">
+                <div>
+                <h3>Values</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, natus gryer thak hulo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="Book">
+    <div id="second-low-div">
+    
+            <h1>Browse our top sedans for rent</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis nihil amet saepe corporis placeat maiores nobis.</p>
+        
+    </div>
+    <div class="booking">
+        <div>
+            <img src="https://i0.wp.com/theweeklyautos.com/wp-content/uploads/2022/10/Audi-R8-with-black-rings-focus-edited.jpg?resize=768%2C432&ssl=1" alt="">
+            <h1>Subaru Forester/Similar</h1>
+            <p>(Automatic) $95</p>
+            <div id="butn">
+                <button>Automatic</button>
+                <button>5 People</button>
+                <button>4 Bags</button>
+                <button>Air Con</button>
+                <button>2000Km free Per Day</button>
+            </div>
+            <button>Book now</button>
+        </div>
+        <div>
+            <img src="https://i0.wp.com/theweeklyautos.com/wp-content/uploads/2022/10/Audi-R8-with-black-rings-focus-edited.jpg?resize=768%2C432&ssl=1" alt="">
+            <h1>Subaru Forester/Similar</h1>
+            <p>(Automatic) $95</p>
+            <div>
+                <button>Automatic</button>
+                <button>5 People</button>
+                <button>4 Bags</button>
+                <button>Air Con</button>
+                <button>2000Km free Per Day</button>
+            </div>
+            <button>Book now</button>
+        </div>
+        <div>
+            <img src="https://i0.wp.com/theweeklyautos.com/wp-content/uploads/2022/10/Audi-R8-with-black-rings-focus-edited.jpg?resize=768%2C432&ssl=1" alt="">
+            <h1>Subaru Forester/Similar</h1>
+            <p>(Automatic) $95</p>
+            <div>
+                <button>Automatic</button>
+                <button>5 People</button>
+                <button>4 Bags</button>
+                <button>Air Con</button>
+                <button>2000Km free Per Day</button>
+            </div>
+            <button>Book now</button>
+        </div>
+        
+    </div>
+    <div id="forSlide">
+        <img src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-round-1/254000/30-128.png" alt="">
+    
+    </div>
+   </div>
+   <div class="Book">
+    <div id="second-low-div">
+        
+            <h1>Browse our top coach & buss for rent</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis nihil amet saepe corporis placeat maiores nobis.</p>
+        
+    </div>
+    <div class="booking">
+        <div>
+            <img id="first" src="https://i1.wp.com/howtorunguide.com/wp-content/uploads/2019/03/Boston-Marathon-Tips-for-Runners-School-Buses.png?resize=768%2C501&ssl=1" alt="">
+            <h1>Eicher coach</h1>
+            <p>(Automatic) $95</p>
+            <div id="butn">
+                <button>Automatic</button>
+                <button>5 People</button>
+                <button>4 Bags</button>
+                <button>Air Con</button>
+                <button>2000Km free Per Day</button>
+            </div>
+            <button>Book now</button>
+        </div>
+        <div>
+            <img src="https://i0.hippopx.com/photos/717/305/250/vehicle-sand-transportation-travel-thumb.jpg" alt="">
+            <h1>Youtong F33</h1>
+            <p>(Automatic) $95</p>
+            <div>
+                <button>Automatic</button>
+                <button>5 People</button>
+                <button>4 Bags</button>
+                <button>Air Con</button>
+                <button>2000Km free Per Day</button>
+            </div>
+            <button>Book now</button>
+        </div>
+        <div>
+            <img src="https://global-uploads.webflow.com/5b9524927572f5a6ed391c8a/6262975b46ecc3ab227e88af_minibus%20(Custom).jpg" alt="">
+            <h1>Daewo G3</h1>
+            <p>(Automatic) $95</p>
+            <div>
+                <button>Automatic</button>
+                <button>5 People</button>
+                <button>4 Bags</button>
+                <button>Air Con</button>
+                <button>2000Km free Per Day</button>
+            </div>
+            <button>Book now</button>
+        </div>
+        
+    </div>
+    <div id="forSlide">
+        <img src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-round-1/254000/30-128.png" alt="">
+    
+    </div>
+   </div>
+   <div class="Book">
+    <div id="second-low-div">
+    
+            <h1>Browse our top pickup trucks for rent</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis nihil amet saepe corporis placeat maiores nobis.</p>
+        
+    </div>
+    <div class="booking">
+        <div>
+            <img src="https://pbs.twimg.com/media/DhRa96NXkAA21pe?format=jpg&name=small" alt="">
+            <h1>Eicher coach</h1>
+            <p>(Automatic) $95</p>
+            <div id="butn">
+                <button>Automatic</button>
+                <button>5 People</button>
+                <button>4 Bags</button>
+                <button>Air Con</button>
+                <button>2000Km free Per Day</button>
+            </div>
+            <button>Book now</button>
+        </div>
+        <div>
+            <img class="second" src="https://www.ktcindia.com/Nimages/Fortuner/1.jpg" alt="">
+            <h1>Youtong F33</h1>
+            <p>(Automatic) $95</p>
+            <div>
+                <button>Automatic</button>
+                <button>5 People</button>
+                <button>4 Bags</button>
+                <button>Air Con</button>
+                <button>2000Km free Per Day</button>
+            </div>
+            <button>Book now</button>
+        </div>
+        <div>
+            <img class="second" src="https://images.unsplash.com/photo-1621829729552-f88f66ddf25d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=693&q=80" alt="">
+            <h1>Daewo G3</h1>
+            <p>(Automatic) $95</p>
+            <div>
+                <button>Automatic</button>
+                <button>5 People</button>
+                <button>4 Bags</button>
+                <button>Air Con</button>
+                <button>2000Km free Per Day</button>
+            </div>
+            <button>Book now</button>
+        </div>
+        
+    </div>
+    <div id="forSlide">
+        <img src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-round-1/254000/30-128.png" alt="">
+    
+    </div>
+   </div>
+   <div class="Book">
+    <div id="second-low-div">
+    
+            <h1>Browse our top safari mobiles for rent</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis nihil amet saepe corporis placeat maiores nobis.</p>
+    
+    </div>
+    <div class="booking">
+        <div>
+            <img id ="third"src="https://pbs.twimg.com/media/DhRa96NXkAA21pe?format=jpg&name=small" alt="">
+            <div class="heart">
+                <h1>Eicher coach</h1>
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nobis quo illum labore fuga possimus ad esse commodi enim eos, minima earum! Sequi saepe adipisci ratione obcaecati repellat ea nemo placeat ullam. Commodi, sequi ipsam?</p>
+                <div class="dollor">
+                    <p>Per | Day</p>
+                    <h3>$ 48.3</h3>
+                </div>           
+            <button>Book now</button>
+        </div>
+        <div>
+            <img class="second" src="https://www.ktcindia.com/Nimages/Fortuner/1.jpg" alt="">
+            <div class="heart">
+                <h1>Youtong F33</h1>
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+            
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut perferendis dolore magnam facilis eligendi delectus reiciendis quam temporibus omnis quaerat doloremque illum dolorem nam nulla consequuntur, error magni dicta voluptatum debitis? Id quia commodi ad.</p>
+            <div class="dollor">
+                <p>Per | Day</p>
+                <h3>$ 48.3</h3>
+            </div>
+            <button>Book now</button>
+        </div>
+        <div>
+            <img class="second" src="https://images.unsplash.com/photo-1621829729552-f88f66ddf25d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=693&q=80" alt="">
+            <div class="heart">
+                <h1>Daewo G5</h1>
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nobis quo illum labore fuga possimus ad esse commodi enim eos, minima earum! Sequi saepe adipisci ratione obcaecati repellat ea nemo placeat ullam. Commodi, sequi ipsam?</p>
+                <div class="dollor">
+                    <p>Per | Day</p>
+                    <h3>$ 48.3</h3>
+                </div>  
+            <button>Book now</button>
+        </div>
+        
+    </div>
+    <div id="forSlide">
+        <img src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-round-1/254000/30-128.png" alt="">
+    
+    </div>
+   </div>
+   <div class="range">
+       <div class="he">
+           <h1>Wide Range of vehicals</h1>
+           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae consequatur sit harum dolorem ea quibusdam.</p>
+        </div> 
+        <div class="cars">
+             <div>
+                <img src="https://www.shutterstock.com/image-photo/munich-germany-september-14-2018-260nw-1836068170.jpg" alt="">
+                <img src="https://images.unsplash.com/photo-1532245128003-3db26c775465?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="">
+             </div>
+             <div>
+                <img src="http://www.audi-magazine.com/wp-content/uploads/2023/05/audi-rs-4-480x360.jpg" alt="">
+             </div>
+             <div>
+                <img src="https://external-preview.redd.it/-yDWlUzI2_n8uN58XyQdTQhsrT0ZAUBrRVShoqbsQbk.jpg?width=320&crop=smart&auto=webp&v=enabled&s=32eb82fcdf72744debca5e6e08e7b2702054be8e" alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/5e7c00929dae7971d5f9517d/1605484733020-OHJ3XAJFRXBAX0W9175G/2020+Porsche+Cayenne+Turbo+S+E-Hybrid+-+07.jpg?format=300w" alt="">
+            
+             </div>
+        </div>
+        <button id="see">See All</button>
+   </div>
+
+   <div class="Book">
+    <div id="second-low-div">
+        <h1>
+            <h1>Browse our top destinations for tour</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis nihil amet saepe corporis placeat maiores nobis.</p>
+        </h1>
+    </div>
+    <div class="booking">
+        <div>
+            <img id ="third"src="https://render.fineartamerica.com/images/rendered/default/acrylic-print/10/6.5/hangingwire/break/images/artworkimages/medium/2/acropolis-parthenon-templeathensgreece-mlenny.jpg" alt="">
+            <div class="heart">
+                <h1>Swizarland</h1>
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nobis quo illum labore fuga possimus ad esse commodi enim eos, minima earum! Sequi saepe adipisci ratione obcaecati repellat ea nemo placeat ullam. Commodi, sequi ipsam?</p>
+                <div class="dollor">
+                    <p>Per | Day</p>
+                    <h3>$ 48.3</h3>
+                </div>           
+            <button>Book now</button>
+        </div>
+        <div>
+            <img class="second" src="https://cdn.shopify.com/s/files/1/0223/4033/products/C3338_large.jpg?v=1647622569" alt="">
+            <div class="heart">
+                <h1>Malaysia</h1>
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+            
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut perferendis dolore magnam facilis eligendi delectus reiciendis quam temporibus omnis quaerat doloremque illum dolorem nam nulla consequuntur, error magni dicta voluptatum debitis? Id quia commodi ad.</p>
+            <div class="dollor">
+                <p>Per | Day</p>
+                <h3>$ 48.3</h3>
+            </div>
+            <button>Book now</button>
+        </div>
+        <div>
+            <img class="second" src="https://images.squarespace-cdn.com/content/v1/5955ec1a59cc68fe479690de/1499060315829-DAPLHF93PEQGQJAO692J/ThousandSpringsFalls?format=1000w" alt="">
+            <div class="heart">
+                <h1>Srilanka</h1>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJgAmAMBEQACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcBAgMEBQj/xAA6EAACAgECAwQGBwcFAAAAAAAAAQIDBAURBhIxIUFRgQcUIlJhsRMyQnGRwdEjYqGy4fDxFRYkQ1P/xAAbAQEAAgMBAQAAAAAAAAAAAAAABAUBAgYHA//EADERAQACAQIEAgkDBQEAAAAAAAABAgMEEQUSMVEhoRMUIjJBYXHR4QZCsRUzkcHwgf/aAAwDAQACEQMRAD8AvEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABjfYD4+ucSaXoy2zMj9q17NNa5pvy7vM+WTNTH7ybpdBn1X9uPDv8ABEsn0lTU2sTS/Y8brtn+CX5kO2un4V811j/Tsbe3k/xDtg+kmqU1HUMCdUX1nTPn28mkbV10fuh8836etEb4r7/WNvummmanh6njLIwb4W1vvj1T8Gu5kyl63jeqiz4MmC/JkjaXr3Ru+LyanqWHpmNLIzr401rvfe/BLvNb3rSN7PrhwZM9uTHG8oXnekmqM3HT9PnbH37p8m/kk2Qra6P2wvsP6evPjlvt9PH7OON6S583/K0tcvjVdu/wa/MxGu71b5P07G3sZP8AMfZLND4l0zWt1h3/ALVLtpsXLNeXf5ErFmpk6SptVw/UaX+5Hh3+D7KZ9kJkAAAAAAAABEeOuJ5aNRHFw2vXb1um1v8ARx977/Ai6nP6ONo6rjhPDvWrTfJ7kec9lVWWTtsnbbOU7JveU5Pdyf3lVPjO8uzrWKxy1jaIahkA9uk6pmaRlxysGxxmvrRf1ZrwZvTJak71R9Tpsepx8mSN/wDS0Fxjp74deq7+1tyer7+19Jt9X+vgWnrNfR87j/6Rn9a9X+Hf4bd/wq/V9Vy9YzHlZtjlL7EF9WteCKvJktknezsNLpcWmx8mOPy8RokAGYTnVZGyqUoWRe8ZRezi/gI8PGGJrFqzWfGFrcDcTy1miWJmNeu0pNy/9I9N/v8AEtdNn9JG09XGcW4dGltGTH7s+U/90S4lKcAAAAAABiT2QFGcQ589S1vMypybUrXGHwiuxFJlvz3mXoWiwxg09McdvN84+aUAAAAAAAAAPoaBnT03WcTKg9lC1KS8Yvsa/A3xX5LxKLrcMZ9PfHPbzXnF7rdF489bAAAAAAA5ZO/0Fm3XkfyNbdG1Peh+fo78q5uvf95RPSvoyAAAAAAAAAAYs35JcvXbsMMx18X6AxU/V69+vJH5F/XpDzS/vS7GWoAAAAAGslv16AUXr2DLTdZzMWS2ULW49n2X2r5lHlry3mHoejzRn09MkdoeA0SQAAAAAAAAB79CwpajrOHiRTastXN2fZXa/wCBvipz3iqNrM0YNPfJ2jz+C9ILZbLoXjzxsAAAAAAABA/SXocsimGq40d50rlvS6uHdLy+RB1mHmjnj4Oh4FrYpadPfpPT69v/AFWy6Fc6sAAAAAAAAdALI9Gmhyopnq2TDlsuXLRGS7VDvl5v+C+JZaPFtHPLlOO62L3jT0nwjr9U8XQmueZAAAAAAAA0shGUHGSTT7GmuxoMxO07wqPjThiei5TyMaG+n2v2Wv8Aqfuv4eBU6jBOOd46O04XxKNVTkvPtx5/P6oz3kZbgAAAAAZAknBfDM9by1k5MGtPqe82+z6WXur4eP8Ae0nTYJyTvPRU8V4jGlpyU9+fL5/Zb1cIwhGMYqKS2SS6ItujiZnfxlsAAAAAAAAAAccrGpy6J0ZFcbKpraUJLdNGJrFo2ltS9sdovWdphUfFvC12g2u6lytwJy9mx9a/3Zfk+8qc+nnFO8dHa8M4nXV15beF4+Hf5wjhHWoAAAAJHwlwtdr1ytu5qsCEtp2LrN+7H833EjBp5yzvPRVcS4nXSV5a+N58vnK3MXGpxKIUY9ca6q1tCEVski2rWKxtDir3tktNrTvMuxlqAAAAAAAAAAADlk0VZGPOm6uNlU1yyhJbqSMTETG0tqWtS0WrO0wqfjLhO3RJvKw1KzT35un4PxXxKrUaecftV6Oy4ZxSNVHo8nv/AM/T5/JFyMuAABKODuFLdbsWVlqVeBF9ejtfgn4fElafTzk9qein4nxSuljkp43/AIWxjY9WNj10UVxrqrioxhFbKKLSIiI2hxt72vabWneZdTLUAAAAAAAAAAAAABztqhbGULIqUZLZprdNGJjfqzEzE7x1VbxlwfZpk552mQlPBfbOtdrp/WPyK3Uaaa+1To67hfFq5ojFmna3fv8AlENyGvUu4N4Qnqk4Z2pQcMHrCD63fpH5kvT6bn9q3RR8U4tGCPRYZ3v37fn+FqVVQpgoVxUYRSUYpbJItIjbwhyEzNpmZ6twwAAAAAAAAAAAAAAAANJwUouLimn2NPvB06Il/sLTv9a9d9r1Xfn9V29nn3/l/d/wRPVKc/N8Oy5/reo9X9F+7pzfL7/NLoRjGKSSSS2SXcS1NPj4y2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/9k=" alt="">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nobis quo illum labore fuga possimus ad esse commodi enim eos, minima earum! Sequi saepe adipisci ratione obcaecati repellat ea nemo placeat ullam. Commodi, sequi ipsam?</p>
+                <div class="dollor">
+                    <p>Per | Day</p>
+                    <h3>$ 48.3</h3>
+                </div>  
+            <button>Book now</button>
+        </div>
+        
+    </div>
+    <div id="forSlide">
+        <img src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-round-1/254000/30-128.png" alt="">
+    
+    </div>
+   </div>
 </body>
 </html>
